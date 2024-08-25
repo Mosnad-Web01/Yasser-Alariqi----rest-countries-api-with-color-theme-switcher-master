@@ -54,7 +54,8 @@ nav .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 input {
@@ -69,11 +70,14 @@ input {
     gap: 10px;
     background-color: hsl(209, 23%, 22%);
     padding: 10px 15px;
-    border-radius: 5px;
     width: 350px;
+    border-radius: 5px;
     max-width: 100%;
 }
 
+.input-section input {
+    width: 100%;
+}
 input::placeholder {
     color: hsla(0, 0%, 100%, 0.662);
 }
@@ -113,9 +117,28 @@ option {
 .countries-container .container{
     margin-top: 60px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-    gap: 80px;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 40px;
 }
+
+@media (max-width: 1124px) {
+    .countries-container .container {
+        grid-template-columns: repeat(3 , 1fr);
+    }
+}
+
+@media (max-width: 868px) {
+    .countries-container .container {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+@media (max-width: 525px) {
+    .countries-container .container {
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}
+
 .country {
     border-radius: 2px;
     overflow: hidden;
@@ -131,9 +154,8 @@ option {
 
 .country img {
     width: 100%;
-    height: auto;
-    max-height: 150px; /* Limit the height of the flag */
-    object-fit: cover;
+    max-width: 450px;
+    height: 180px;
     border-bottom: 2px solid hsl(209, 23%, 22%);
 }
 
@@ -161,9 +183,3 @@ option {
     font-size: 0.9rem;
 }
 
-.countries-container .container {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-}
