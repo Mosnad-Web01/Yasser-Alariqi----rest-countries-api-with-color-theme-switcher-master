@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <div class="container">
+            <h1 class="logo">Where in the World?</h1>
+            <button class="theme-btn">
+              <i class="fa-solid fa-moon"></i>Dark Mode
+            </button>
+          </div>
+        </nav>
+      </header>
+      <section class="main-section">
+        <div class="container">
+          <div class="filter-section">
+            <div class="input-section">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Search for a country..." />
+            </div>
+            <select>
+              <option value="Filter by Region">Filter by Region</option>
+              <option value="Africa">Africa</option>
+              <option value="Americas">Americas</option>
+              <option value="Asia">Asia</option>
+              <option value="Europe">Europe</option>
+              <option value="Oceania">Oceania</option>
+            </select>
+          </div>
+        </div>
+
+        <section class="countries-container">
+          <div class="container">
+            <article class="country" id="country-card">
+              <img src="" alt="" />
+              <div class="country-info">
+                <h2 class="card-title"></h2>
+                <ul class="card-info">
+                  <li><strong>Population:</strong></li>
+                  <li><strong>Region:</strong></li>
+                  <li><strong>Capital:</strong></li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script/app.js"></script>
+  </body>
+</html>
